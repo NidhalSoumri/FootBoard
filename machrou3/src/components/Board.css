@@ -1,0 +1,166 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(31, 24px);
+  grid-template-rows: repeat(19, 24px);
+
+  border: 3px solid white;
+  background: #2e8b57;
+}
+
+.cell {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: #2e8b57;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-sizing: border-box;
+}
+
+/* vertical line */
+.line-vertical::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: 50%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 2;
+}
+
+/* horizontal line */
+.line-horizontal::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: 50%;
+  height: 3px;
+  transform: translateY(-50%);
+  background: white;
+}
+
+.top-border::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  background: white;
+}
+
+.bottom-border::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  right: -3px;
+  top: 0%;
+  height: 3px;
+  transform: translateY(-2px);
+  background: white;
+}
+
+.left-border::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: 100%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 2;
+}
+.right-border::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  left: 0%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: white;
+  z-index: 2;
+}
+
+.goal-area {
+  background: rgba(255,255,255,0.12);
+}
+
+.goal-line {
+  background: rgb(151, 217, 143);
+}
+.center-line {
+  background: white;
+}
+.center-circle {
+  background: white;
+}
+
+.move-square {
+  background-color: rgba(23, 49, 15, 0.8);
+}
+
+
+
+
+/*players*/
+.player {
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 8px;
+  font-weight: bold;
+
+  color: white;
+
+  pointer-events: auto;
+  cursor: pointer;
+
+  position: absolute;
+
+  z-index: 10;
+}
+
+.home-player {
+  background: #1565c0;
+}
+
+.away-player {
+  background: #d32f2f;
+}
+.board-container {
+  position: relative;
+}
+
+.player-wrapper {
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* The ball */
+.ball {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  z-index: 200;
+
+  pointer-events: none;
+}
+
+.ball img {
+  width: 100%;
+  height: 100%;
+}
