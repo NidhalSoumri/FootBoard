@@ -1,0 +1,91 @@
+.action-menu {
+  width: 200px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 16px;
+  color: #eef2ee;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #1f2a22, #161b16);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.am-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.am-role {
+  font-size: 16px;
+  font-weight: 900;
+}
+.am-team {
+  font-size: 11px;
+  opacity: 0.6;
+}
+.am-ball {
+  margin-left: auto;
+  font-size: 10px;
+  color: #ffd24a;
+  font-weight: 700;
+}
+
+.am-btn {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #eef2ee;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+.am-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+.am-btn.active {
+  background: #5ad17a;
+  border-color: #5ad17a;
+  color: #0f150d;
+}
+.am-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.am-shoot {
+  background: rgba(255, 210, 74, 0.14);
+  border-color: rgba(255, 210, 74, 0.5);
+  color: #ffd24a;
+}
+.am-shoot:hover:not(:disabled) {
+  background: rgba(255, 210, 74, 0.26);
+}
+
+.am-cancel {
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.am-hint,
+.am-tip {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+.am-tip {
+  margin-top: 4px;
+  min-height: 16px;
+  color: #9ad8a0;
+}

@@ -1,10 +1,16 @@
-import Board from "./components/Board";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Landing from "./pages/Landing";
+import Game from "./pages/Game";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <Board />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/game" element={<Game />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </div>
   );
 }

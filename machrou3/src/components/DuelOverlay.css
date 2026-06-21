@@ -1,0 +1,132 @@
+.duel-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.duel-modal {
+  width: min(92vw, 460px);
+  padding: 22px;
+  color: #eef2ee;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #1f2a22, #12180f);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+}
+
+.duel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.duel-head h2 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.duel-vs {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.duel-tip {
+  font-size: 13px;
+  line-height: 1.45;
+  opacity: 0.85;
+  margin-bottom: 14px;
+}
+.duel-result {
+  font-size: 14px;
+  font-weight: 800;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.duel-result.good {
+  background: rgba(90, 209, 122, 0.18);
+  color: #8ff0a6;
+}
+.duel-result.bad {
+  background: rgba(226, 59, 59, 0.18);
+  color: #ff9a9a;
+}
+
+.duel-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.duel-row {
+  display: flex;
+  gap: 4px;
+}
+.duel-cell {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: #243a2a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: background 0.1s ease, transform 0.05s ease;
+}
+.duel-cell:hover {
+  background: #2f4d37;
+  transform: scale(1.05);
+}
+.duel-cell.entry {
+  border-left: 3px solid #ffd24a;
+}
+.duel-cell.exit {
+  border-right: 3px solid #5ad17a;
+}
+.duel-cell.path {
+  background: #ffd24a;
+}
+.duel-cell.blocked {
+  background: #e23b3b;
+}
+.duel-cell.hit {
+  background: repeating-linear-gradient(
+    45deg,
+    #e23b3b,
+    #e23b3b 6px,
+    #ffd24a 6px,
+    #ffd24a 12px
+  );
+}
+
+.duel-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.duel-btn {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #eef2ee;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.duel-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+.duel-btn.primary {
+  background: #5ad17a;
+  border-color: #5ad17a;
+  color: #0f150d;
+}
+.duel-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
